@@ -1,0 +1,59 @@
+body { 
+  background-color: darkslateblue; /* No se hereda */
+  font-family: sans-serif; /* Hereda */
+  color: whitesmoke; /* Hereda */
+  margin: 0px;
+  height: 100vh; /* U. Relativa > Viewport Height */
+}
+
+/* 
+
+Bloque y Línea
+
+Los elementos de bloque miden todo el ancho disponible de su contenedor y miden el alto de su contenido.
+
+Los elementos de línea miden el ancho y el alto de su contenido.
+
+Ancho (width) y Alto (height)
+
+Nos sirven para establecer las dimensiones de los elementos de html.
+
+Width. Define el ancho y recibe valores en unidades en px, %, em, rem, auto.
+
+Height. Define la altura y recibe valores en unidades en px, %, em, rem, auto.
+
+* Si no se especifica la altura a un elemento de bloque, el elemento ajustará su altura al contenido. 
+
+* Se recomienda usar unidades relativas para mejorar la adaptabilidad de los elementos del html.
+
+Los elementos de línea no reaccionan al ancho y alto especifico. Por default de ajustarán al contenido.
+
+Si queremos que un elemento de lpinea responda al ancho y al alto. Necesitamos cambiar su comportamiento de visualización con la propiedad display.
+
+Display. Determina el comportamiento de visualización de un elemento en el html. Recibe valores como: inline-block y block. 
+
+*/
+
+div {
+  background-color: darkblue;
+  width: auto; /* Default */
+  width: 300px; /* U. Absoluta */
+  width: 50%; /* U. Relativa */
+
+  height: auto; /* Default */
+  height: 200px; /* U. Absoluta */
+  height: 50%;/* U. Relativa.. Funciona cuando el padre tiene una altura definida */
+
+  /* display: inline; */ /* Esto cambia un elemento de bloque a línea */
+}
+
+span {
+  background-color: darkviolet;
+  width: auto; /* Default */
+  width: 400px; /* No Funciona */
+  width: 50%; /* No Funciona */
+  height: auto; /* Dafult > Depende del Contenido */
+  height: 500px; /* No Funciona */
+  height: 50%; /* No Funciona */
+  display: inline-block;
+}
