@@ -1,0 +1,184 @@
+  /* Box Sizing 
+
+  Es la propiedad que calcula las dimesiones de un elemento incluyendo el padding y el border.
+
+box-sixing: content-box; Valor por defencto. Si a un elemento le agregamos padding y border. Sus calores se suman al total del ancho y el alto.
+
+box-sixing: border-box; Este valor modífica el comportamiento de la caja y no suma los valores del padding y border al ancho y al alto total de la caja.
+
+Nota: Una práctica común es definirle a todos los elementos del HTML la propiedad box-sixing con su valor: border-box; desde el principio.
+*/
+
+/* Resset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslateblue;
+  color: whitesmoke;
+  font-family: sans-serif;
+  padding: 24px;
+}
+
+i {
+  color: rgb(36, 20, 0);
+}
+
+ul {
+  list-style: none; /* Quita los bullets por dafult */
+}
+
+  /* 
+
+  Modelo de Caja (Box Model)
+
+  Es un concepto fundamental de CSS que describe como los elementos de una página web se organizan y calculan su tamaño.
+
+  1. Contenido
+
+  Es el area donde se encuentra el texto, las imágenes y algún otro elemento hijo. El tamaño de esta área se define con width y height.
+
+  2. Relleno (padding)
+
+  Es el espacio entre el contenido y el borde de la caja. Ayuda a crear un espacio interno alrededor del contenido.
+
+  Esta propiedad es un "shorthand" o propiedad abreviada, que controla los 4 lados posibles de la caja.
+
+  Shorthand
+
+    padding: top right buttom left; // 4 valores
+    padding: top left/right buttom; // 3 valores
+    padding: top/buttom left/right // 2 valores
+    padding: t/b/l/r; // 1 valor
+
+  Propiedades individuales
+
+    padding-top: valor;
+    padding-right: valor;
+    padding-buttom: valor;
+    padding-left: valor;
+
+    3. Borde (border)
+
+    El área que rodea al contenido y al padding. Podemos modificar su grosor, estilo y color. También es un Shorthand
+
+    Shorthand
+
+      border: width, style y color;
+
+  Propiedades Individuales
+
+    border-width: valor;
+    border-style: valor;
+    border-color: valor;
+
+  Propiedades por lado
+
+    border-top-widht: valor;
+    border-right-widht: valor;
+    border-buttom-widht: valor;
+    border-left-widht: valor;
+
+    border-top-style: valor;
+    border-right-style: valor;
+    border-buttom-style: valor;
+    border-left-style: valor;
+
+    border-top-color: valor;
+    border-right-color: valor;
+    border-buttom-color: valor;
+    border-left-color: valor;
+
+  Valores del Estilo de Borde
+
+  - Solid - Lineal
+  - Dashed - Guiones
+  - Dotted - Puntos
+  - Double - Doble línea
+  - Groove - Bicelado
+  - None - Ninguno // Default
+  - Hidden - Oculto
+
+  4. Margen (margin)
+
+  Permite crear un espacio entre el borde de un elemento y otros elementos de la página. También es un shorthand.
+
+  Shorthand
+
+    margin: top right bottom left; // 4 valores
+    margin: top right/left bottom; // 3 valores
+    margin: top/bottom right/left; // 2 valores
+    margin: t/r/b/t // 1 valor
+
+  Propiedades individuales
+
+    margin-top: valor;
+    margin-right: valor;
+    margin-left: valor;
+    margin bottom: valor;
+
+
+*/
+
+
+
+.card {
+  width: 300px;
+  height: auto;
+  /*padding: 24px 24px;
+  padding: 24px 32px 0px;
+  padding: 24px 32px 40px 48px;*/
+  padding: 24px;
+  border: 8px hidden black;
+  margin: 24px 12px 24px;
+  background-color: orangered;
+  color: black;
+  display: inline-block;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: yellowgreen;
+  display: block;
+}
+
+.card-title {
+  padding: 16px 0px;
+  background-color: darkgoldenrod;
+  font-size: 48px;
+}
+
+.card-description {
+  background-color: orange;
+  border-top-width: 2px;
+  border-top-style: dashed;
+  border-top-color: black;
+
+  border-bottom-width: 2px;
+  border-bottom-style: dashed;
+  border-bottom-color: black;
+
+  padding: 8px 0 px;
+  font-size: 20px;
+}
+
+.card-skills {
+  background-color: purple;
+}
+
+.card-attack {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-width: 2px;
+  border-bottom-color:black;
+  margin-bottom: 8px;
+  background-color: blueviolet;
+}
